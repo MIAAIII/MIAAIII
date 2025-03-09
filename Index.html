@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexitatea Algoritmilor în C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-size: 25px; /* Increased font size */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff6347;
+            font-size: 1.1em;
+            text-decoration: underline;
+        }
+        h1, h2, h3 {
+            color: #333;
+            font-size: 2em; /* Larger headings */
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1em; /* Larger font for table content */
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .content {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#index.html">Introducere</a></li>
+                    <li><a href="#formule.html">Formule</a></li>
+                    <li><a href="#exemple.html">Exemple</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container content">
+        <h1 id="introducere">Complexitatea Algoritmilor în C++</h1>
+
+        <p>Complexitatea unui algoritm se referă la cantitatea de resurse consumate la execuţie - adică timp de execuţie şi spaţiu de memorie. Eficienţa unui algoritm se evaluează din două puncte de vedere:</p>
+        <ul>
+            <li>din punctul de vedere al spaţiului de memorie necesar pentru memorarea valorilor variabilelor care intervin în algoritm (complexitatea spaţiu);</li>
+            <li>din punctul de vedere al timpului de execuţie (complexitate timp).</li>
+        </ul>
+        <p>Complexitatea spaţiu depinde mult de tipurile de date şi de structurile de date folosite. Complexitatea timp sau timpul necesar execuţiei programului depinde de numărul de operaţii elementare efectuate de algoritm.</p>
+
+        <h2>Operațiile de bază ale unui algoritm</h2>
+        <p>Un algoritm efectuează trei operaţii de bază:</p>
+        <ul>
+            <li><strong>Intrare/Ieşire:</strong> operaţiile de citire/scriere a datelor; (ex: cin>> ; cout<<)</li>
+            <li><strong>Atribuire:</strong> atribuirea valorilor variabilelor; (ex: var=2)</li>
+            <li><strong>Decizie:</strong> evaluarea condiţiunilor logice pentru a determina ramificaţiile execuţiei. (ex: if, for, while...)</li>
+        </ul>
+
+        <p>În general, operaţiile de intrare/ieşire sunt o constantă pentru algoritmi. De exemplu, citim n întregi și afișăm pe cel mai mare dintre ei, indiferent de algoritmul ales, se execută n operații de intrare și una de ieșire. Prin urmare, numărul de operații de intrare/ieșire este constant indiferent de algoritm. Nu vom analiza aceste operații.</p>
+        <p>Între celelalte două operaţii (de atribuire şi de decizie), vom considera că una dintre ele este cea de bază şi vom estima de câte ori se execută aceasta. O vom alege pe cea al cărui număr de executări este mai ușor de estimat sau pe cea care necesită mai mult timp de execuţie.</p>
+        <p>Se poate măsura complexitatea exact (cantitativ), adică numărul de operaţii elementare, sau se poate măsura aproximativ (calitativ), rezultând clasa de complexitate din care face parte algoritmul.</p>
+
+        <h2>Masurarea calitativă / aproximativă a complexităţii</h2> 
+        <p>Sunt folosite diferite notaţii care sunt utile pentru analiza performanței şi a complexităţii unui algoritm.</p>
+        <p>O (Big O): Descrie o limită superioară a creșterii funcției, indicând cel mai rău caz. De exemplu, dacă un algoritm are complexitatea O(n²), timpul de execuție crește proporțional cu pătratul dimensiunii intrării în cel mai rău caz.</p>
+        <p>Ω (Omega): Descrie o limită inferioară a creșterii funcției, indicând cel mai bun caz. De exemplu, dacă un algoritm are complexitatea Ω(n), timpul de execuție nu va fi mai mic decât o constantă înmulțită cu dimensiunea intrării.</p>
+        <p>Θ (Theta): Indică faptul că funcția are atât o limită superioară, cât și una inferioară, adică timpul de execuție crește exact în același ritm cu dimensiunea intrării. De exemplu, dacă un algoritm are complexitatea Θ(n log n), timpul de execuție crește proporțional cu n log n.</p>
+
+        <h2>Notarea Big O</h2>  
+        <p>Notarea Big O este utilizată pentru a descrie complexitatea unui algoritm, oferind o estimare a timpului sau spațiului necesar în funcție de dimensiunea intrării.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Notare Big O</th>
+                    <th>Descriere</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>O(1)</td>
+                    <td>Complexitate constantă</td>
+                </tr>
+                <tr>
+                    <td>O(n)</td>
+                    <td>Complexitate liniară</td>
+                </tr>
+                <tr>
+                    <td>O(n²)</td>
+                    <td>Complexitate pătratică</td>
+                </tr>
+                <tr>
+                    <td>O(log n)</td>
+                    <td>Complexitate logaritmică</td>
+                </tr>
+                <tr>
+                    <td>O(n log n)</td>
+                    <td>Complexitate liniară logaritmică</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+<h2>Reguli generale de estimare a complexităţii</h2>
+ 
+<p>Cicluri - Timpul de execuţie al unui ciclu este cel mult timpul de execuţie al
+instrucţiunilor din interiorul ciclului înmulţit cu numărul de iteraţii. De regulă se
+  estimează ca o structură repetitivă este de ordinul O(n).</p>
+
+Cicluri imbricate - Analiza se realizează din interior spre exterior. Timpul de execuţie al
+instrucţiunilor din interiorul unui grup de cicluri imbricate este dat de timpul de
+execuţie al instrucţiunilor înmulţit cu produsul numărului de iteraţii ale tuturor
+ciclurilor. Cu alte cuvinte, dacă avem două cicluri imbricate (for în alt for, spre
+exemplu) putem aproxima complexitatea la O(n2).
+  
+  <h2>Reguli generale de estimare a complexităţii</h2>
+  <p>Structuri secvenţiale - În acest caz timpii de execuţie se adună, ceea ce înseamnă că maximul lor
+  contează, adică gradul lui n va fi dat de gradul cel mai mare.</p>
+  <p>Structuri decizionale - Timpul de execuţie al instrucţiunii decizionale este cel mult timpul de execuţie
+al testului plus maximul dintre timpii de rulare pe ramura ATUNCI, respectiv
+  else. </p>
+Dacă există apeluri de funcţii, acestea trebuie analizate primele.  
+</div>
+
+</body>
+</html>
