@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complexitatea Algoritmilor în C++</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            font-size: 25px; /* Increased font size */
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        nav ul {
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ff6347;
-            font-size: 1.1em;
-            text-decoration: underline;
-        }
-        h1, h2, h3 {
-            color: #333;
-            font-size: 2em; /* Larger headings */
-        }
-        pre {
-            background: #eee;
-            padding: 10px;
-            overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            font-size: 1.1em; /* Larger font for table content */
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .content {
-            margin-top: 200px;
-            
-    
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complexitatea Algoritmilor în C++</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-size: 25px; /* Font mărit */
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    nav ul {
+      /* Folosim Flexbox pentru a putea alinia elementele */
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    /* Mutăm ultimul element (Webografie) la dreapta */
+    nav ul li:last-child {
+      margin-left: auto;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ff6347;
+      font-size: 1.1em;
+      text-decoration: underline;
+    }
+    h1, h2, h3 {
+      color: #333;
+      font-size: 2em; /* Titluri mai mari */
+    }
+    h1 {
+      text-align: center;
+      margin-top: 80px; /* Ajustează spațiul de sus */
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+      font-size: 1.1em; /* Font mărit pentru conținutul tabelului */
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .content {
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Introducere</a></li>
-                    <li><a href="formule.html">Formule</a></li>
-                    <li><a href="exemple.html">Exemple</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container content">
-        <h1 id="introducere">Complexitatea Algoritmilor în C++</h1>
-
-        <p>Complexitatea unui algoritm se referă la cantitatea de resurse consumate la execuţie - adică timp de execuţie şi spaţiu de memorie. Eficienţa unui algoritm se evaluează din două puncte de vedere:</p>
+  <header>
+    <div class="container">
+      <nav>
         <ul>
-            <li>din punctul de vedere al spaţiului de memorie necesar pentru memorarea valorilor variabilelor care intervin în algoritm (complexitatea spaţiu);</li>
-            <li>din punctul de vedere al timpului de execuţie (complexitate timp).</li>
+          <li><a href="index.html">Introducere</a></li>
+          <li><a href="formule.html">Formule</a></li>
+          <li><a href="exemple.html">Exemple</a></li>
+          <!-- Noua rubrica "Webografie" va fi afișată la dreapta -->
+          <li><a href="webografie.html">Webografie</a></li>
         </ul>
-        <p>Complexitatea spaţiu depinde mult de tipurile de date şi de structurile de date folosite. Complexitatea timp sau timpul necesar execuţiei programului depinde de numărul de operaţii elementare efectuate de algoritm.</p>
+      </nav>
+    </div>
+  </header>
+  <div class="container content">
+    <h1 id="introducere">Complexitatea Algoritmilor în C++</h1>
+  
+
+    <p>Complexitatea unui algoritm se referă la cantitatea de resurse consumate la execuţie - adică timp de execuţie şi spaţiu de memorie. Eficienţa unui algoritm se evaluează din două puncte de vedere:</p>
+    <ul>
+      <li>din punctul de vedere al spaţiului de memorie necesar pentru memorarea valorilor variabilelor care intervin în algoritm (complexitatea spaţiu);</li>
+      <li>din punctul de vedere al timpului de execuţie (complexitate timp).</li>
+
+    <p>Complexitatea spaţiu depinde mult de tipurile de date şi de structurile de date folosite. Complexitatea timp sau timpul necesar execuţiei programului depinde de numărul de operaţii elementare efectuate de algoritm.</p>
 
         <h2>Operațiile de bază ale unui algoritm</h2>
         <p>Un algoritm efectuează trei operaţii de bază:</p>
