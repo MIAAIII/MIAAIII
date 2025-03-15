@@ -116,33 +116,18 @@
     <div class="container">
       <nav>
         <ul>
-          <li><a href="index.html">Introducere</a></li>
-          <li><a href="formule.html">Formule</a></li>
-          <li><a href="exemple.html">Exemple</a></li>
+          <li><a href="index.html">Introduction</a></li>
+          <li><a href="carte.html">Carte</a></li>
           <!-- Noua rubrica "Webografie" va fi afișată la dreapta -->
-          <li><a href="webografie.html">Webografie</a></li>
+          <li><a href="webografie.html">webographie</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <div class="container content">
-    <h1 id="introducere">Formule</h1>
-    <p>Vom calcula într-o funcție F(n) numărul de operații elementare executate. Exemplu: sortarea unui vector de n elemente.</p>
-    <p>Vom avea trei cazuri: cazul cel mai favorabil, cel mai defavorabil și cazul mediu. Cazul favorabil este vectorul gata sortat, deci:</p>
-    <p>Ffavorabil(n) = (n-1) + (n-2) + ... + 3 + 2 + 1 = (n-1)*n/2 - deoarece se efectuează numai comparația de (n-1)*n/2</p>
-    <p>Cazul cel mai defavorabil este vectorul sortat invers, deci:</p>
-    <p>Fdefavorabil(n) = 4 * ((n-1) + (n-2) + ... + 3 + 2 + 1) = 4*(n-1)*n/2 = 2(n-1)n, deoarece se execută atât condiția din if cât și cele trei operații de atribuire</p>
-    <p>Cazul mediu se consideră media aritmetică a celorlalte două cazuri: Fmediu(n) = (((n-1)*n/2) + (4*(n-1)*n/2)) / 2 = 5(n-1)*n/4</p>
-    <p>Pentru n suficient de mare au loc inegalitățile:</p>
-    <p>log(n) < n < n*log(n) < n^2 < n^3 < 2^n</p>
-    <p>prin urmare:</p>
-    <p>O(log(n)) < O(n) < O(n*log(n)) < O(n^2) < O(n^3) < O(2^n)</p>
-    <h2>Măsurarea calitativă / aproximativă a complexității. Clase de complexități</h2>
-    <p>Sunt folosite diferite notații care sunt utile pentru analiza performanței și a complexității unui algoritm. Aceste notații marginesc valorile unei funcții f date cu ajutorul unor constante și al altei funcții. Fie f și g două funcții definite pe numere întregi pozitive;</p>
-    <p>Notații:</p>
-    <p>O (margine superioară – upper bound) – folosit pentru a descrie complexitatea timp, f(n) = O(g(n)), dacă există constantele c și n₀ astfel încât f(n) ≤ c * g(n), pentru n ≥ n₀. Pentru orice c, f(n) are un ordin de creștere cel mult egal cu cel al lui g(n).</p>
-    <p>Ω (Omega) (margine inferioară – lower bound) – f(n) = Ω(g(n)), dacă există constantele c și n₀ astfel încât f(n) ≥ c * g(n) (sau g(n)=O(f(n))), pentru n ≥ n₀. Pentru orice c, f(n) are un ordin de creștere cel puțin la fel de mare ca cel al lui g(n).</p>
-    <p>Θ (Theta) (categorie constantă – same order) – f(n) = Θ(g(n)), dacă și numai dacă f(n) = O(g(n)) și g(n) = O(f(n)), sau altfel spus, ambele funcții au aproximativ aceeași rată de creștere.</p>
-  </div>
+  
+
+  
+
 </body>
 </html>
