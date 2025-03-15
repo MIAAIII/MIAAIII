@@ -3,88 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complexitatea Algoritmilor în C++</title>
+  <title>Ile-de-France</title>
   <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      margin: 0;
-      padding: 0;
       background-color: #f4f4f4;
-      font-size: 25px; /* Font mărit */
+      font-size: 18px;
+      padding-top: 60px; /* Adjusted for fixed navbar */
     }
+
+    /* Navigation Bar Styling */
     header {
       background-color: #333;
       color: #fff;
       padding: 10px 0;
-      width: 100%;
       position: fixed;
       top: 0;
       left: 0;
+      width: 100%;
       z-index: 1000;
     }
+
     .container {
       width: 80%;
-      margin: auto;
-      overflow: hidden;
+      margin: 0 auto;
     }
+
     nav ul {
-      /* Folosim Flexbox pentru a putea alinia elementele */
       display: flex;
-      align-items: center;
       list-style: none;
       padding: 0;
-      margin: 0;
     }
+
     nav ul li {
       margin: 0 15px;
     }
-    /* Mutăm ultimul element (Webografie) la dreapta */
-    nav ul li:last-child {
-      margin-left: auto;
-    }
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.3s ease;
+      padding: 10px 15px;
+      display: block;
+      transition: background-color 0.3s ease;
     }
+
     nav ul li a:hover {
-      color: #ff6347;
-      font-size: 1.1em;
-      text-decoration: underline;
+      background-color: #ff6347;
     }
+
+    /* Main Content Styling */
+    .content {
+      margin-top: 20px;
+      padding: 20px;
+    }
+
     h1, h2, h3 {
       color: #333;
-      font-size: 2em; /* Titluri mai mari */
+      margin-bottom: 20px;
     }
-    h1 {
-      text-align: center;
-      margin-top: 80px; /* Ajustează spațiul de sus */
-    }
-    pre {
-      background: #eee;
-      padding: 10px;
-      overflow-x: auto;
-    }
-    table {
+
+    /* Iframe Styling */
+    iframe {
       width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
+      height: 900px;
+      border: none;
     }
-    table, th, td {
-      border: 1px solid #ddd;
-    }
-    th, td {
-      padding: 15px;
-      text-align: left;
-      font-size: 1.1em; /* Font mărit pentru conținutul tabelului */
-    }
-    th {
-      background-color: #f4f4f4;
-    }
-    .content {
-      margin-top: 60px;
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      iframe {
+        height: 400px;
+      }
     }
   </style>
 </head>
@@ -93,15 +105,16 @@
     <div class="container">
       <nav>
         <ul>
-          <li><a href="index.html">Introducere</a></li>
-          <li><a href="formule.html">Formule</a></li>
-          <li><a href="exemple.html">Exemple</a></li>
-          <!-- Noua rubrica "Webografie" va fi afișată la dreapta -->
-          <li><a href="webografie.html">Webografie</a></li>
+          <li><a href="index.html">Introduction</a></li>
+          <li><a href="coutumes.html">Coutumes</a></li>
+          <li><a href="carte.html">Carte</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="container content">
-    <h1 id="introducere">Webografie</h1>
-    
+
+  <div class="content">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQMAwXkdrzOFmQoIDb4WM77yW3ds7F6E_Ze3BMKtVj-MIFEJd1wdBTPsu-UTzXFIDVGjKYgqo0nX8T5/embed?start=true&loop=false&delayms=60000" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+</body>
+</html>
