@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Île-de-France</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            background: url('https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?cs=srgb&dl=pexels-felixmittermeier-1146134.jpg&fm=jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
 
+        .title {
+            text-align: center;
+            font-size: 7em;
+            margin-top: 3vh;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Impact', sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: 5vh;
+        }
+
+        .button-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background-color: #189593;
+            color: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .button-container a:hover {
+            background-color: #146d68;
+            transform: scale(1.2);
+        }
+
+        .button-container a i {
+            font-size: 3em;
+            display: block;
+            line-height: 1;
+        }
+
+        .button-container a::after {
+            content: '\1F3E0';
+            position: absolute;
+            font-size: 4em;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer .details {
+            display: flex;
+            flex-direction: column;
+            font-size: 2em;
+            max-width: 70%;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .footer .logo {
+            width: 350px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title">L'Île-de-France</div>
+
+    <div class="button-container">
+        <a href="introduction.html" target="_blank"></a>
+    </div>
+
+    <div class="footer">
+        <div class="details">
+            <div>Elev: Bobeică Mihai-Cosmin</div>        
+            <div>Clasa XI-B</div>
+            <div>Prof. Coordonator: Carataș Adela</div>
+        </div>
+        <img src="https://www.liceultraian.ro/images/logo.png" alt="Insigna Liceului" class="logo">
+    </div>
+</body>
+</html>
