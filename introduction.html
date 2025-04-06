@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ile-de-France</title>
   <style>
-    /* Definirea animației fade-in */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    /* Aplicarea animației la tot corpul paginii */
     body {
       animation: fadeIn 2s ease-in;
       font-family: Arial, sans-serif;
@@ -19,7 +17,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      font-size: 25px; /* Font mărit */
+      font-size: 25px;
     }
 
     header {
@@ -40,7 +38,6 @@
     }
 
     nav ul {
-      /* Folosim Flexbox pentru a putea alinia elementele */
       display: flex;
       align-items: center;
       list-style: none;
@@ -52,7 +49,6 @@
       margin: 0 15px;
     }
 
-    /* Mutăm ultimul element (Webographie) la dreapta */
     nav ul li:last-child {
       margin-left: auto;
     }
@@ -72,12 +68,12 @@
 
     h1, h2, h3 {
       color: #333;
-      font-size: 2em; /* Titluri mai mari */
+      font-size: 2em;
     }
 
     h1 {
       text-align: center;
-      margin-top: 80px; /* Ajustează spațiul de sus */
+      margin-top: 80px;
     }
 
     pre {
@@ -99,7 +95,7 @@
     th, td {
       padding: 15px;
       text-align: left;
-      font-size: 1.1em; /* Font mărit pentru conținutul tabelului */
+      font-size: 1.1em;
     }
 
     th {
@@ -110,11 +106,10 @@
       margin-top: 60px;
     }
 
-    /* Stilizare pentru elementul figure */
     figure {
       float: right;
       margin: 10px;
-      width: 30%; /* Ajustează lățimea imaginii */
+      width: 30%;
       text-align: center;
     }
 
@@ -129,9 +124,8 @@
       color: #555;
     }
 
-    /* Clasa pentru a adăuga spațiu suplimentar între paragrafe */
     .spatiu-suplimentar {
-      margin-bottom: 30px; /* Ajustează valoarea după preferințe */
+      margin-bottom: 30px;
     }
   </style>
 </head>
@@ -141,8 +135,8 @@
       <nav>
         <ul>
           <li><a href="index.html">Introduction</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
           <li><a href="coutumes.html">Coutumes</a></li>
-          <!-- Noua rubrica "Webographie" va fi afișată la dreapta -->
           <li><a href="carte.html">Carte</a></li>
         </ul>
       </nav>
